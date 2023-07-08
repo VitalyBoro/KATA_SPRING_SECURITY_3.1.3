@@ -51,7 +51,7 @@ public class AdminController {
         return "update_user";
     }
     @PatchMapping("/updateUserData")
-    public String updateUserData(@Valid @ModelAttribute("update") User user, BindingResult bindingResult) {
+    public String updateUserData(@Valid @ModelAttribute("user") User user, BindingResult bindingResult) {
         if(bindingResult.hasErrors()) {
             return "update_user";
         }
